@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road to Profitability - 1-on-1 Trading Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d0d0d;
+            color: #e5e5e5;
+            min-height: 100vh;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+        .badge {
+            display: inline-block;
+            background: #22c55e;
+            color: #000;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(90deg, #fff 0%, #999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 20px;
+            color: #888;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #22c55e;
+            color: #000;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.3);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .feature {
+            background: #1a1a1a;
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid #222;
+        }
+        .feature-number {
+            font-size: 14px;
+            color: #22c55e;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        .feature h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .feature p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .testimonial {
+            background: #1a1a1a;
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            margin-bottom: 16px;
+        }
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            color: #ccc;
+        }
+        .testimonial-author {
+            color: #22c55e;
+            font-weight: 600;
+        }
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #222;
+        }
+        .about-avatar {
+            width: 80px;
+            height: 80px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+        }
+        .about-text h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .about-text p {
+            color: #888;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .cta-section {
+            background: #1a1a1a;
+            padding: 60px 40px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            text-align: center;
+        }
+        .cta-section h2 {
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            color: #888;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+            font-size: 14px;
+            border-top: 1px solid #222;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 32px; }
+            .about { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="badge">1-on-1 Trading Course</div>
+        <h1>Road to Profitability</h1>
+        <p class="subtitle">From beginner to profitable trader. Personal coaching by Oscar-K-Trader.</p>
+        <a href="https://whop.com" class="cta-button">Start Your Journey →</a>
+    </section>
+
+    <div class="container">
+        <div class="section">
+            <h2>What You'll Learn</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-number">01</div>
+                    <h3>Determine Bias</h3>
+                    <p>Learn to read the market on the 1D timeframe. Determine the right bias before you even trade.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">02</div>
+                    <h3>Entry Strategy</h3>
+                    <p>Wait for the sweep. Use HTF FVGs and price action for your entry trigger.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">03</div>
+                    <h3>Risk Management</h3>
+                    <p>0.5-2% risk per trade. Max 2 trades per day. Discipline is everything.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-number">04</div>
+                    <h3>Psychology</h3>
+                    <p>Develop a winner's mindset. Keep emotions out of your trading.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>About Oscar-K-Trader</h2>
+            <div class="about">
+                <div class="about-avatar">🦈</div>
+                <div class="about-text">
+                    <h3>Oscar-K-Trader</h3>
+                    <p>Active trader focused on forex, indices and crypto. Passionate about price action trading and risk management. Helping others become profitable.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What Traders Say</h2>
+            <div class="testimonial">
+                <p class="testimonial-text">"Oscar's approach changed everything. My drawdown is halved, my win rate up. Finally I understand what waiting for the sweep means."</p>
+                <div class="testimonial-author">— Jan, Forex Trader</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">"The 1-on-1 sessions are intensive but effective. No fluff, just actionable info that works."</p>
+                <div class="testimonial-author">— Lisa, Prop Firm Trader</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="cta-section">
+                <h2>Ready to Start?</h2>
+                <p>Limited spots available. Book your free intake call.</p>
+                <a href="https://whop.com" class="cta-button">Apply Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Road to Profitability. All rights reserved.</p>
+    </footer>
+</body>
+</html>
