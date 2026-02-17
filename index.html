@@ -3,114 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Road to Profitability - 1-on-1 Trading Course</title>
+    <title>The Road to Profitability - Trading Coaching</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        :root {
+            --primary-green: #00C853;
+            --dark-green: #009624;
+            --black: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --medium-gray: #2a2a2a;
+            --light-gray: #888888;
+            --white: #ffffff;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0d0d0d;
-            color: #e5e5e5;
+            background: var(--black);
+            color: var(--white);
             min-height: 100vh;
         }
         .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+            padding: 100px 20px;
             text-align: center;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid var(--medium-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,200,83,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .logo-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
         }
         .badge {
             display: inline-block;
-            background: #22c55e;
-            color: #000;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 12px;
+            background: rgba(0, 200, 83, 0.15);
+            color: var(--primary-green);
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-size: 13px;
             font-weight: 600;
             margin-bottom: 24px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            border: 1px solid rgba(0, 200, 83, 0.3);
         }
         h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            background: linear-gradient(90deg, #fff 0%, #999 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+        h1 span {
+            color: var(--primary-green);
         }
         .subtitle {
             font-size: 20px;
-            color: #888;
-            margin-bottom: 32px;
-            max-width: 600px;
+            color: var(--light-gray);
+            margin-bottom: 40px;
+            max-width: 560px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
         }
         .cta-button {
             display: inline-block;
-            background: #22c55e;
+            background: var(--primary-green);
             color: #000;
-            padding: 16px 40px;
-            border-radius: 8px;
+            padding: 18px 48px;
+            border-radius: 12px;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(0, 200, 83, 0.3);
         }
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 40px rgba(34, 197, 94, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(0, 200, 83, 0.4);
+            background: var(--dark-green);
+        }
+        .price {
+            color: var(--light-gray);
+            font-size: 15px;
+            margin-top: 16px;
+        }
+        .price span {
+            color: var(--primary-green);
+            font-weight: 600;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
         .section {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
         h2 {
-            font-size: 32px;
-            margin-bottom: 24px;
-            color: #fff;
+            font-size: 36px;
+            margin-bottom: 32px;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
         .feature {
-            background: #1a1a1a;
-            padding: 28px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            background: var(--dark-gray);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid var(--medium-gray);
+            transition: all 0.3s ease;
+        }
+        .feature:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-4px);
         }
         .feature-number {
-            font-size: 14px;
-            color: #22c55e;
-            font-weight: 600;
-            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 16px;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .feature h3 {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 12px;
-            color: #fff;
+            font-weight: 600;
         }
         .feature p {
-            color: #888;
-            font-size: 14px;
-            line-height: 1.6;
+            color: var(--light-gray);
+            font-size: 15px;
+            line-height: 1.7;
         }
         .testimonial {
-            background: #1a1a1a;
+            background: var(--dark-gray);
             padding: 32px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            border-radius: 16px;
+            border: 1px solid var(--medium-gray);
             margin-bottom: 16px;
         }
         .testimonial-text {
@@ -120,76 +186,98 @@
             color: #ccc;
         }
         .testimonial-author {
-            color: #22c55e;
+            color: var(--primary-green);
             font-weight: 600;
         }
         .about {
             display: flex;
             align-items: center;
             gap: 32px;
-            background: #1a1a1a;
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            background: var(--dark-gray);
+            padding: 48px;
+            border-radius: 16px;
+            border: 1px solid var(--medium-gray);
         }
         .about-avatar {
-            width: 80px;
-            height: 80px;
-            background: #22c55e;
-            border-radius: 50%;
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            font-weight: 700;
-            color: #000;
+            font-size: 36px;
+            flex-shrink: 0;
         }
         .about-text h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-            color: #fff;
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
         .about-text p {
-            color: #888;
-            font-size: 14px;
-            line-height: 1.6;
+            color: var(--light-gray);
+            font-size: 15px;
+            line-height: 1.7;
         }
         .cta-section {
-            background: #1a1a1a;
-            padding: 60px 40px;
-            border-radius: 12px;
-            border: 1px solid #222;
+            background: var(--dark-gray);
+            padding: 64px 48px;
+            border-radius: 16px;
+            border: 1px solid var(--medium-gray);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0,200,83,0.1) 0%, transparent 70%);
+            pointer-events: none;
         }
         .cta-section h2 {
             margin-bottom: 16px;
+            position: relative;
         }
         .cta-section p {
-            color: #888;
+            color: var(--light-gray);
             margin-bottom: 32px;
-            max-width: 500px;
+            max-width: 480px;
             margin-left: auto;
             margin-right: auto;
+            font-size: 17px;
+            position: relative;
         }
         .footer {
             text-align: center;
-            padding: 40px 20px;
-            color: #555;
+            padding: 48px 20px;
+            color: #444;
             font-size: 14px;
-            border-top: 1px solid #222;
+            border-top: 1px solid var(--medium-gray);
         }
         @media (max-width: 600px) {
-            h1 { font-size: 32px; }
+            h1 { font-size: 36px; }
+            h2 { font-size: 28px; }
             .about { flex-direction: column; text-align: center; }
+            .cta-section { padding: 40px 24px; }
         }
     </style>
 </head>
 <body>
     <section class="hero">
-        <div class="badge">1-on-1 Trading Course</div>
-        <h1>Road to Profitability</h1>
-        <p class="subtitle">From beginner to profitable trader. Personal coaching by Oscar-K-Trader.</p>
-        <a href="https://whop.com" class="cta-button">Start Your Journey →</a>
+        <div class="logo-mark">
+            <div class="logo-icon">📈</div>
+            <span class="logo-text">The Road to Profitability</span>
+        </div>
+        <div class="badge">1-on-1 Trading Coaching</div>
+        <h1>Master <span>Price Action</span> Trading</h1>
+        <p class="subtitle">From struggling trader to consistent pro. Personal coaching by Oscar-K-Trader. Learn to read the market, wait for the sweep, and trade with discipline.</p>
+        <a href="https://whop.com/trading-accountability-coaching/the-road-to-profitability/" class="cta-button">Get Started →</a>
+        <p class="price">One-time payment: <span>$497</span> or $197/month</p>
     </section>
 
     <div class="container">
@@ -199,22 +287,22 @@
                 <div class="feature">
                     <div class="feature-number">01</div>
                     <h3>Determine Bias</h3>
-                    <p>Learn to read the market on the 1D timeframe. Determine the right bias before you even trade.</p>
+                    <p>Learn to read the market on the 1D timeframe. Determine the right bias before you even trade. Skip the guesswork.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-number">02</div>
-                    <h3>Entry Strategy</h3>
-                    <p>Wait for the sweep. Use HTF FVGs and price action for your entry trigger.</p>
+                    <h3>Wait for the Sweep</h3>
+                    <p>Use HTF FVGs and price action for your entry trigger. Patience is your greatest edge.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-number">03</div>
                     <h3>Risk Management</h3>
-                    <p>0.5-2% risk per trade. Max 2 trades per day. Discipline is everything.</p>
+                    <p>0.5-2% risk per trade. Max 2 trades per day. Protect your capital first.</p>
                 </div>
                 <div class="feature">
                     <div class="feature-number">04</div>
-                    <h3>Psychology</h3>
-                    <p>Develop a winner's mindset. Keep emotions out of your trading.</p>
+                    <h3>Trading Psychology</h3>
+                    <p>Develop a winner's mindset. Keep emotions out of your trading. Trade with confidence.</p>
                 </div>
             </div>
         </div>
@@ -225,7 +313,7 @@
                 <div class="about-avatar">🦈</div>
                 <div class="about-text">
                     <h3>Oscar-K-Trader</h3>
-                    <p>Active trader focused on forex, indices and crypto. Passionate about price action trading and risk management. Helping others become profitable.</p>
+                    <p>Active trader focused on forex, indices and crypto. Passionate about price action trading and risk management. Helping traders go from inconsistent to profitable.</p>
                 </div>
             </div>
         </div>
@@ -233,11 +321,11 @@
         <div class="section">
             <h2>What Traders Say</h2>
             <div class="testimonial">
-                <p class="testimonial-text">"Oscar's approach changed everything. My drawdown is halved, my win rate up. Finally I understand what waiting for the sweep means."</p>
+                <p class="testimonial-text">"Oscar's approach changed everything. My drawdown is halved, my win rate up significantly. Finally I understand what waiting for the sweep means."</p>
                 <div class="testimonial-author">— Jan, Forex Trader</div>
             </div>
             <div class="testimonial">
-                <p class="testimonial-text">"The 1-on-1 sessions are intensive but effective. No fluff, just actionable info that works."</p>
+                <p class="testimonial-text">"The 1-on-1 sessions are intensive but effective. No fluff, just actionable info that actually works in the real market."</p>
                 <div class="testimonial-author">— Lisa, Prop Firm Trader</div>
             </div>
         </div>
@@ -245,14 +333,14 @@
         <div class="section">
             <div class="cta-section">
                 <h2>Ready to Start?</h2>
-                <p>Limited spots available. Book your free intake call.</p>
-                <a href="https://whop.com" class="cta-button">Apply Now</a>
+                <p>Limited spots available. Join the road to profitability today.</p>
+                <a href="https://whop.com/trading-accountability-coaching/the-road-to-profitability/" class="cta-button">Apply Now</a>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <p>© 2025 Road to Profitability. All rights reserved.</p>
+        <p>© 2025 The Road to Profitability. All rights reserved.</p>
     </footer>
 </body>
 </html>
